@@ -21,7 +21,7 @@ export default function ProjectsPage() {
         className="pointer-events-none absolute left-1/2 top-[-6rem] -z-10 h-[22rem] w-[42rem] -translate-x-1/2 rounded-full bg-brand/20 blur-[120px] dark:bg-brand/25"
       />
 
-      <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 sm:pt-32">
+      <div className="mx-auto max-w-6xl px-5 pt-20 pb-20 sm:px-6 sm:pt-28">
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-brand">
             <span className="h-px w-8 bg-brand" />

@@ -52,7 +52,7 @@ export default async function ProjectPage({ params }: RouteParams) {
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[26rem] grid-pattern opacity-30 dark:opacity-40"
       />
 
-      <div className="mx-auto max-w-3xl px-6 pt-16 pb-8 sm:pt-24">
+      <div className="mx-auto max-w-3xl px-5 pt-14 pb-8 sm:px-6 sm:pt-20">
         <Link
           href="/projects"
           className="group inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground cursor-pointer"
@@ -143,7 +143,7 @@ export default async function ProjectPage({ params }: RouteParams) {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-6 py-20">
+      <div className="mx-auto max-w-3xl px-5 py-20 sm:px-6">
         <Link
           href={`/projects/${nextProject.slug}`}
           className="group relative flex items-center justify-between overflow-hidden rounded-2xl border border-border/60 glass p-6 transition-all duration-500 hover:border-brand/40 hover:shadow-[0_20px_60px_-20px_var(--brand)] cursor-pointer"

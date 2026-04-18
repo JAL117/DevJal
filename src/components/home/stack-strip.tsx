@@ -44,7 +44,7 @@ const STACK: readonly StackGroup[] = [
 
 export function StackStrip() {
   return (
-    <section className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28">
+    <section className="relative mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-28">
       <div className="mb-12">
         <p className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-brand">
           <span className="h-px w-8 bg-brand" />
