@@ -56,9 +56,13 @@ export function Hero() {
 
         <FadeIn delay={0.12}>
           <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Soy {siteConfig.shortName} — ingeniero de software full-stack desde
-            Chiapas, México. Me interesa más entender bien el problema que
-            encajar un stack de moda. Trabajo en{" "}
+            Soy{" "}
+            <span className="font-medium text-foreground">
+              {siteConfig.name}
+            </span>
+            {" "}— ingeniero de software full-stack desde Chiapas, México. Me
+            interesa más entender bien el problema que encajar un stack de
+            moda. Trabajo en{" "}
             <span className="text-foreground/90">web</span>,{" "}
             <span className="text-foreground/90">mobile</span>,{" "}
             <span className="text-foreground/90">backend</span>,{" "}

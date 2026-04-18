@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "José Alberto Morales Solórzano",
-  shortName: "Jal",
+  shortName: "José Alberto",
   role: "Ingeniero de Software · Full-Stack",
   location: "Chiapas, México",
   tagline:
