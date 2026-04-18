@@ -49,7 +49,7 @@ export function Footer() {
             </a>
           </div>
           <p className="font-mono text-[11px] text-muted-foreground/80">
-            © {year} · Hecho con Next.js en Chiapas
+            © {year} · {siteConfig.name}
           </p>
         </div>
       </div>
