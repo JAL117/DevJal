@@ -10,7 +10,7 @@ export function Footer() {
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-brand/40 to-transparent"
       />
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-14 sm:flex-row sm:items-start sm:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-14 sm:flex-row sm:items-start sm:justify-between sm:px-6">
         <div className="flex flex-col gap-1.5">
           <div className="flex items-center gap-2.5">
             <span className="flex size-7 items-center justify-center rounded-lg bg-gradient-to-br from-brand to-purple-600 text-brand-foreground text-xs font-bold shadow-sm">
