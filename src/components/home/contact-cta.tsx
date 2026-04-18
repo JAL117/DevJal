@@ -3,8 +3,8 @@ import { siteConfig } from "@/lib/site-config";
 
 export function ContactCTA() {
   return (
-    <section className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28">
-      <div className="group relative overflow-hidden rounded-3xl border border-border/60 glass-strong p-10 sm:p-16">
+    <section className="relative mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-28">
+      <div className="group relative overflow-hidden rounded-3xl border border-border/60 glass-strong p-7 sm:p-10 md:p-16">
         <div
           aria-hidden
           className="pointer-events-none absolute -top-40 -right-40 h-96 w-96 rounded-full bg-brand/25 blur-[120px] animate-blob-1"
@@ -34,7 +34,7 @@ export function ContactCTA() {
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <a
               href={`mailto:${siteConfig.email}`}
-              className="group/btn relative inline-flex h-12 items-center gap-3 overflow-hidden rounded-full bg-foreground px-7 text-sm font-medium text-background shadow-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl cursor-pointer"
+              className="group/btn relative inline-flex h-12 items-center gap-3 overflow-hidden rounded-full bg-foreground px-7 text-sm font-medium text-background shadow-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl active:scale-[0.98] cursor-pointer"
             >
               <span className="relative z-10">{siteConfig.email}</span>
               <ArrowRight className="relative z-10 size-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
@@ -47,7 +47,7 @@ export function ContactCTA() {
               href={siteConfig.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 items-center rounded-full border border-border glass px-6 text-sm font-medium transition-all duration-300 hover:border-foreground/30 hover:bg-accent/60 cursor-pointer"
+              className="inline-flex h-12 items-center rounded-full border border-border glass px-6 text-sm font-medium transition-all duration-300 hover:border-foreground/30 hover:bg-accent/60 active:scale-[0.98] cursor-pointer"
             >
               LinkedIn
             </a>
