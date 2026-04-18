@@ -50,7 +50,7 @@ export default function AboutPage() {
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[30rem] grid-pattern opacity-30 dark:opacity-40"
       />
 
-      <div className="mx-auto max-w-3xl px-6 pt-24 pb-28 sm:pt-32">
+      <div className="mx-auto max-w-3xl px-5 pt-20 pb-28 sm:px-6 sm:pt-28">
         <p className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-brand">
           <span className="h-px w-8 bg-brand" />
           Sobre mí

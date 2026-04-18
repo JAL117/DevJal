@@ -23,7 +23,7 @@ export function Hero() {
         <div className="animate-blob-2 h-[22rem] w-[22rem] rounded-full bg-fuchsia-500/15 blur-[120px] dark:bg-purple-500/20" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 sm:pt-32 sm:pb-28">
+      <div className="mx-auto max-w-6xl px-5 pt-16 pb-20 sm:px-6 sm:pt-24 sm:pb-28">
         <FadeIn>
           <div className="inline-flex items-center gap-2 rounded-full border border-border/60 glass px-3 py-1 text-xs text-muted-foreground shadow-sm">
             <span className="relative flex size-2">
@@ -38,7 +38,7 @@ export function Hero() {
         </FadeIn>
 
         <FadeIn delay={0.05}>
-          <h1 className="mt-8 max-w-4xl text-balance text-[clamp(2.5rem,6vw,4.5rem)] font-semibold tracking-tight leading-[1.05]">
+          <h1 className="mt-8 max-w-4xl text-balance text-[clamp(2.25rem,6vw,4.5rem)] font-semibold tracking-tight leading-[1.05]">
             Construyo{" "}
             <span className="text-gradient-brand animate-gradient">
               software útil
@@ -76,7 +76,7 @@ export function Hero() {
           <div className="mt-12 flex flex-wrap items-center gap-3">
             <Link
               href="/projects"
-              className="group relative inline-flex h-11 items-center gap-2 overflow-hidden rounded-full bg-foreground px-6 text-sm font-medium text-background shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
+              className="group relative inline-flex h-12 items-center gap-2 overflow-hidden rounded-full bg-foreground px-6 text-sm font-medium text-background shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
             >
               <span className="relative z-10">Ver proyectos</span>
               <ArrowRight className="relative z-10 size-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -87,7 +87,7 @@ export function Hero() {
             </Link>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="group inline-flex h-11 items-center gap-2 rounded-full border border-border glass px-6 text-sm font-medium transition-all duration-300 hover:border-foreground/30 hover:bg-accent/60 cursor-pointer"
+              className="group inline-flex h-12 items-center gap-2 rounded-full border border-border glass px-6 text-sm font-medium transition-all duration-300 hover:border-foreground/30 hover:bg-accent/60 active:scale-[0.98] cursor-pointer"
             >
               <Sparkles className="size-3.5 text-brand transition-transform duration-300 group-hover:rotate-12" />
               Contactar
