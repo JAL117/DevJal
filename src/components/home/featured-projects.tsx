@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { getFeaturedProjects } from "@/data/projects";
+import { FadeIn, StaggerContainer } from "@/components/motion/fade-in";
 
 export function FeaturedProjects() {
   const featured = getFeaturedProjects();
@@ -8,27 +9,29 @@ export function FeaturedProjects() {
 
   return (
     <section className="relative mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-28">
-      <div className="mb-12 flex items-end justify-between">
-        <div>
-          <p className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-brand">
-            <span className="h-px w-8 bg-brand" />
-            Trabajo seleccionado
-          </p>
-          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-            Proyectos destacados
-          </h2>
+      <FadeIn>
+        <div className="mb-12 flex items-end justify-between">
+          <div>
+            <p className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-brand">
+              <span className="h-px w-8 bg-brand" />
+              Trabajo seleccionado
+            </p>
+            <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+              Proyectos destacados
+            </h2>
+          </div>
+          <Link
+            href="/projects"
+            className="group hidden items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline-flex cursor-pointer"
+          >
+            Ver todos
+            <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
         </div>
-        <Link
-          href="/projects"
-          className="group hidden items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline-flex cursor-pointer"
-        >
-          Ver todos
-          <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </Link>
-      </div>
+      </FadeIn>
 
-      <ul className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-5">
-        <li className="md:col-span-2 md:row-span-2">
+      <StaggerContainer as="ul" className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-5">
+        <FadeIn as="li" className="md:col-span-2 md:row-span-2">
           <Link
             href={`/projects/${hero.slug}`}
             className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border/70 glass p-7 transition-all duration-500 hover:border-brand/40 hover:shadow-[0_28px_80px_-20px_var(--brand)] cursor-pointer sm:p-9"
@@ -103,10 +106,10 @@ export function FeaturedProjects() {
               </span>
             </div>
           </Link>
-        </li>
+        </FadeIn>
 
         {rest.map((project, i) => (
-          <li key={project.slug}>
+          <FadeIn as="li" key={project.slug}>
             <Link
               href={`/projects/${project.slug}`}
               className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-border/70 glass p-5 transition-all duration-500 hover:border-brand/40 hover:shadow-[0_20px_60px_-20px_var(--brand)] cursor-pointer sm:p-6"
@@ -159,9 +162,9 @@ export function FeaturedProjects() {
                 </span>
               </div>
             </Link>
-          </li>
+          </FadeIn>
         ))}
-      </ul>
+      </StaggerContainer>
     </section>
   );
 }

@@ -30,7 +30,7 @@ export function Nav() {
 
   return (
     <>
-      <header className="sticky top-2 z-40 mx-2 mt-2 sm:top-4 sm:mx-4 sm:mt-0">
+      <header className="sticky top-[calc(env(safe-area-inset-top,0px)+0.5rem)] z-40 mx-2 mt-2 sm:top-[calc(env(safe-area-inset-top,0px)+1rem)] sm:mx-4 sm:mt-0">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 rounded-2xl border border-border/60 glass-strong px-3 shadow-lg sm:h-16 sm:px-5">
           <Link
             href="/"

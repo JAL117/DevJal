@@ -133,7 +133,7 @@ export default async function ProjectPage({ params }: RouteParams) {
                   {section.title}
                 </h2>
               </div>
-              <div className="mt-6 space-y-5 pl-10 text-pretty text-[17px] leading-relaxed text-muted-foreground">
+              <div className="mt-6 space-y-5 pl-10 text-pretty text-[17px] leading-relaxed text-muted-foreground max-w-[65ch]">
                 {section.body.map((paragraph, j) => (
                   <p key={j}>{paragraph}</p>
                 ))}
