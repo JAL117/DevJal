@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { ArrowRight, MapPin, Sparkles } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
-import { FadeIn } from "@/components/motion/fade-in";
+import { FadeIn, StaggerContainer } from "@/components/motion/fade-in";
+import { Magnetic } from "@/components/motion/magnetic";
+import { AITerminal } from "@/components/ui/terminal";
 
 export function Hero() {
   return (
@@ -24,76 +26,94 @@ export function Hero() {
       </div>
 
       <div className="mx-auto max-w-6xl px-5 pt-16 pb-20 sm:px-6 sm:pt-24 sm:pb-28">
-        <FadeIn>
-          <div className="inline-flex items-center gap-2 rounded-full border border-border/60 glass px-3 py-1 text-xs text-muted-foreground shadow-sm">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand/60 opacity-75" />
-              <span className="relative inline-flex size-2 rounded-full bg-brand" />
-            </span>
-            <MapPin className="size-3" aria-hidden />
-            <span>{siteConfig.location}</span>
-            <span className="text-border">·</span>
-            <span className="text-foreground/80">Disponible para proyectos</span>
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-7">
+            <StaggerContainer delay={0.1}>
+              <FadeIn>
+                <div className="inline-flex items-center gap-2 rounded-full border border-border/60 glass px-3 py-1 text-xs text-muted-foreground shadow-sm">
+                  <span className="relative flex size-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand/60 opacity-75" />
+                    <span className="relative inline-flex size-2 rounded-full bg-brand" />
+                  </span>
+                  <MapPin className="size-3" aria-hidden />
+                  <span>{siteConfig.location}</span>
+                  <span className="text-border">·</span>
+                  <span className="text-foreground/80">Disponible para proyectos</span>
+                </div>
+              </FadeIn>
+
+              <FadeIn delay={0.05}>
+                <h1 className="mt-8 max-w-4xl text-balance text-[clamp(2.25rem,6vw,4.5rem)] font-semibold tracking-tight leading-[1.05]">
+                  Construyo{" "}
+                  <span className="text-gradient-brand animate-gradient">
+                    software útil
+                  </span>
+                  ,
+                  <br className="hidden sm:inline" /> de la{" "}
+                  <span className="italic font-medium text-foreground/90">
+                    idea
+                  </span>{" "}
+                  a{" "}
+                  <span className="italic font-medium text-foreground/90">
+                    producción
+                  </span>
+                  .
+                </h1>
+              </FadeIn>
+
+              <FadeIn delay={0.12}>
+                <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
+                  Soy{" "}
+                  <span className="font-medium text-foreground">
+                    {siteConfig.name}
+                  </span>{" "}
+                  — ingeniero de software full-stack desde Chiapas, México. Me
+                  interesa más entender bien el problema que encajar un stack de
+                  moda. Trabajo en{" "}
+                  <span className="text-foreground/90">web</span>,{" "}
+                  <span className="text-foreground/90">mobile</span>,{" "}
+                  <span className="text-foreground/90">backend</span>,{" "}
+                  <span className="text-foreground/90">datos</span> y{" "}
+                  <span className="text-foreground/90">agentes de IA</span> — lo
+                  que el proyecto necesite.
+                </p>
+              </FadeIn>
+
+              <FadeIn delay={0.2}>
+                <div className="mt-12 flex flex-wrap items-center gap-3">
+                  <Magnetic>
+                    <Link
+                      href="/projects"
+                      className="group relative inline-flex h-12 items-center gap-2 overflow-hidden rounded-full bg-foreground px-6 text-sm font-medium text-background shadow-lg transition-all duration-300 hover:shadow-xl active:scale-[0.98] cursor-pointer"
+                    >
+                      <span className="relative z-10">Ver proyectos</span>
+                      <ArrowRight className="relative z-10 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      <span
+                        aria-hidden
+                        className="absolute inset-0 -z-0 bg-gradient-to-r from-brand/0 via-brand/20 to-brand/0 translate-x-[-100%] transition-transform duration-700 group-hover:translate-x-[100%]"
+                      />
+                    </Link>
+                  </Magnetic>
+                  <Magnetic>
+                    <a
+                      href={`mailto:${siteConfig.email}`}
+                      className="group inline-flex h-12 items-center gap-2 rounded-full border border-border glass px-6 text-sm font-medium transition-all duration-300 hover:border-foreground/30 hover:bg-accent/60 active:scale-[0.98] cursor-pointer"
+                    >
+                      <Sparkles className="size-3.5 text-brand transition-transform duration-300 group-hover:rotate-12" />
+                      Contactar
+                    </a>
+                  </Magnetic>
+                </div>
+              </FadeIn>
+            </StaggerContainer>
           </div>
-        </FadeIn>
 
-        <FadeIn delay={0.05}>
-          <h1 className="mt-8 max-w-4xl text-balance text-[clamp(2.25rem,6vw,4.5rem)] font-semibold tracking-tight leading-[1.05]">
-            Construyo{" "}
-            <span className="text-gradient-brand animate-gradient">
-              software útil
-            </span>
-            ,
-            <br className="hidden sm:inline" /> de la{" "}
-            <span className="italic font-medium text-foreground/90">idea</span>{" "}
-            a{" "}
-            <span className="italic font-medium text-foreground/90">
-              producción
-            </span>
-            .
-          </h1>
-        </FadeIn>
-
-        <FadeIn delay={0.12}>
-          <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Soy{" "}
-            <span className="font-medium text-foreground">
-              {siteConfig.name}
-            </span>
-            {" "}— ingeniero de software full-stack desde Chiapas, México. Me
-            interesa más entender bien el problema que encajar un stack de
-            moda. Trabajo en{" "}
-            <span className="text-foreground/90">web</span>,{" "}
-            <span className="text-foreground/90">mobile</span>,{" "}
-            <span className="text-foreground/90">backend</span>,{" "}
-            <span className="text-foreground/90">datos</span> y{" "}
-            <span className="text-foreground/90">agentes de IA</span> — lo que
-            el proyecto necesite.
-          </p>
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
-          <div className="mt-12 flex flex-wrap items-center gap-3">
-            <Link
-              href="/projects"
-              className="group relative inline-flex h-12 items-center gap-2 overflow-hidden rounded-full bg-foreground px-6 text-sm font-medium text-background shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
-            >
-              <span className="relative z-10">Ver proyectos</span>
-              <ArrowRight className="relative z-10 size-4 transition-transform duration-300 group-hover:translate-x-1" />
-              <span
-                aria-hidden
-                className="absolute inset-0 -z-0 bg-gradient-to-r from-brand/0 via-brand/20 to-brand/0 translate-x-[-100%] transition-transform duration-700 group-hover:translate-x-[100%]"
-              />
-            </Link>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="group inline-flex h-12 items-center gap-2 rounded-full border border-border glass px-6 text-sm font-medium transition-all duration-300 hover:border-foreground/30 hover:bg-accent/60 active:scale-[0.98] cursor-pointer"
-            >
-              <Sparkles className="size-3.5 text-brand transition-transform duration-300 group-hover:rotate-12" />
-              Contactar
-            </a>
+          <div className="lg:col-span-5">
+            <FadeIn delay={0.3} y={20}>
+              <AITerminal />
+            </FadeIn>
           </div>
-        </FadeIn>
+        </div>
       </div>
     </section>
   );
